@@ -1,12 +1,12 @@
-# KingClient
+# Kingonomy
 
-TODO: Write a gem description
+DSL for interacting with the TradeKing API.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'king_client'
+    gem 'kingonomy'
 
 And then execute:
 
@@ -14,11 +14,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install king_client
+    $ gem install kingonomy
 
 ## Usage
 
-TODO: Write usage instructions here
+DSL is still under development
 
 ## Contributing
 
