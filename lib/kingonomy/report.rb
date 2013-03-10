@@ -9,12 +9,12 @@ module Kingonomy
       @stocks = stocks
     end
 
-    def create_report_table(stocks, fields, &block)
+    def create_report_table(stocks, fields)
       table = Table(fields)
       stocks.each do |stock|
         table << stock.fields
       end
-      table.sub_table(&block) if block
+      table
     end
 
   end

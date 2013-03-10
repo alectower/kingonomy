@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Kingonomy::VERSION
   gem.authors       = ["Alec Tower"]
   gem.email         = ["alectower@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{DSL for TradeKing API}
+  gem.summary       = %q{DSL for TradeKing API}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

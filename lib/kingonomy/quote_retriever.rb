@@ -13,9 +13,10 @@ module Kingonomy
 
     def get_quotes(stocks, fundamentals = [])
       stock_quotes = http_request.request_quotes(stocks, fundamentals)
+      default_fundamentals = fundamentals.inject({}) { |hash, key| hash[key] = 0; hash}
       stocks = []
       stock_quotes.each do |quote|
-        stocks << Kingonomy::Stock.new(quote)
+        stocks << Kingonomy::Stock.new(default_fundamentals.merge(quote))
       end
       stocks
     end
