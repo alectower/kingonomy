@@ -10,19 +10,17 @@ module Kingonomy
       @sort_blocks = []
       @filter_blocks = []
       instance_eval File.read(file), file, 1
-      print_quote_report
     end
     
     def stock_report(&block)
       block.call
     end
 
-    def print_quote_report
+    def get_quote_report
       stock_quotes = fetch_stock_quotes
       sort_stocks(stock_quotes)
       table = create_stock_report(stock_quotes)
       filter_stocks(table)
-      p table
       table
     end
 

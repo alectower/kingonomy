@@ -5,4 +5,6 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'kingonomy/dsl_runner'
 
-file = ARGV.shift ? Kingonomy::DSLRunner.new(file) : Kingonomy::DSLRunner.new(File.expand_path(Dir.pwd + '/spec/integration/dsl_test.rb'))
+file = ARGV.shift 
+runner = file ? Kingonomy::DSLRunner.new(file) : Kingonomy::DSLRunner.new(File.expand_path(Dir.pwd + '/spec/integration/dsl_test.rb'))
+puts runner.get_quote_report.to_text
